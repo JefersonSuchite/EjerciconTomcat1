@@ -1,0 +1,134 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #A6F6FF;
+    margin: 0;
+    background: url(../imagenes/fondo.jpg);
+}
+
+#container {
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    padding: 10px;
+}
+
+header{
+    background-color: #007BFF;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    
+}
+
+#content{
+    float: left;
+    background: #A6F6FF;
+    width: 100%;
+    text-align: center;
+    
+}
+
+nav{
+    height: 100%;
+}
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+nav  ul  li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+    color: #fff;
+}
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background: #1AACAC;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+#selected{
+    transform: scale(1.1);
+    background: #1AACAC;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+/*Sub Menu*/
+nav ul li ul{
+    text-decoration: none;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #191d1e;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0,0, 0, 0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+
+}
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+nav ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #343434;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+nav ul li ul li a{
+    display: block;
+    color: #abbd99;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+nav ul li ul li a:hover{
+    background: #445c3a;
+    color: #fff;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0, 0, 0.5);
+}
+
+#text-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.texto {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
